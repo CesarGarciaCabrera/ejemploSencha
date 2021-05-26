@@ -5,28 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signos vitales</title>
+
+    <!--Sencha-->
+    <link rel="stylesheet" type="text/css" href="js/jslib/theme-triton/resources/theme-triton-all.css">
+    <script type="text/javascript" src="js/jslib/ext-all.js"></script>
+    <script type="text/javascript" src="js/jslib/theme-triton/theme-triton.js"></script>
+    <script type="text/javascript" src="js/sencha/propio.js"></script>
+
+    <!--CSS-->
     <link rel="stylesheet" href="css/estilos.css">
+
+    <!--JS-->
+    <script src="js/funciones.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 <body>
-    <form action="">
+    
+    <form>
         <div>
-            <input type="number" name ="temperatura" placeholder="Temperatura" required> <span>grados</span>
+            <input type="text" name="temperatura" id="temp" placeholder="Temperatura" required> <span>grados</span>
         </div>
         
         <div>
-            <input type="number" name ="ritmo" placeholder="Ritmo cardiaco" required> <span>latidos por minuto</span>
+            <input type="number" name="ritmo" id="rit" placeholder="Ritmo cardiaco"> <span>latidos por minuto</span>
         </div>
 
         <div>
-            <input type="number" name ="oxigenacion" placeholder="Oxigenación" required> 
+            <input type="number" name="oxigenacion" id="oxi" placeholder="Oxigenación"> 
         </div>
 
         <div>
-            <input type="number" name ="presion" placeholder="Presión arterial" required> <span>mm Hg/span>
+            <input type="number" name="presion" id="pres" placeholder="Presión arterial"> <span>mm Hg</span>
         </div>
 
         <div>
-            <button type="submit" value="enviar">Mostrar resultados</button>
+            <button type="button" onclick="result()">Mostrar resultados</button>
         </div>
     </form>
 </body>
