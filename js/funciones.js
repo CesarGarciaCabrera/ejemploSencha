@@ -6,7 +6,7 @@ let oxiResultado="";
 //parseFloat(tempResultado);
 
 
-function calcTemp(){
+function calcularTemperatura(){
     let temp= $("#temp").val(); 
     let tempr=parseFloat(temp);
     console.log("Se guardo el valor "+temp+" en la variable temp");
@@ -18,7 +18,7 @@ function calcTemp(){
     }
 }
 
-function calcRit(){
+function calcularRitmo(){
     let rit= $("#rit").val(); 
     let ritr=parseFloat(rit);
     console.log("Se guardo el valor "+rit+" en la variable rit");
@@ -30,7 +30,7 @@ function calcRit(){
     }
 }
 
-function calcOx(){
+function calcularOxigenacion(){
     let oxi= $("#oxi").val(); 
     let oxir=parseFloat(oxi);
     console.log("Se guardo el valor "+oxi+" en la variable oxi");
@@ -42,11 +42,10 @@ function calcOx(){
     }
 }
 
-function calcPres(){
+function calcularPresion(){
     let pres= $("#pres").val(); 
-    let presr=parseFloat(pres);
     console.log("Se guardo el valor "+pres+" en la variable pres");
-    if(presr >59 && presr<101){
+    if(pres=="120/80"){
         presResultado="Normal";
     }
     else{
@@ -55,8 +54,9 @@ function calcPres(){
 }
 
 function result(){
-    calcTemp();
-    calcRit();
-    calcOx()
-    alert("Temperatura: "+tempResultado+"\nRitmo cardiaco: "+ritResultado+"\nOxigenación: "+oxiResultado);
+    calcularTemperatura();
+    calcularRitmo();
+    calcularOxigenacion();
+    calcularPresion();
+    alert("Temperatura: "+tempResultado+"\nRitmo cardiaco: "+ritResultado+"\nOxigenación: "+oxiResultado+"\nPresión arterial: "+presResultado);
 }
